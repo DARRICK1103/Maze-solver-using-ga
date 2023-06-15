@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "31a40c56-7f68-409f-b3d9-97dd22cfa578": {
+      "ProjectGuid": "31a40c56-7f68-409f-b3d9-97dd22cfa578",
+      "DisplayName": "maze_01",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
