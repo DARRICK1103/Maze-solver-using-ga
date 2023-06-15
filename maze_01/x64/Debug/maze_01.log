@@ -1,7 +1,7 @@
 ﻿  ga.cpp
-C:\Users\User\Desktop\coding sources\maze_01\maze_01\genome.h(43,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\User\Desktop\coding sources\maze_01\maze_01\genome.h(44,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
   main.cpp
-C:\Users\User\Desktop\coding sources\maze_01\maze_01\genome.h(43,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\User\Desktop\coding sources\maze_01\maze_01\genome.h(44,1): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
 C:\Users\User\Desktop\coding sources\maze_01\maze_01\main.cpp(7,33): warning C4305: 'initializing': truncation from 'double' to 'float'
 C:\Users\User\Desktop\coding sources\maze_01\maze_01\main.cpp(8,33): warning C4305: 'initializing': truncation from 'double' to 'float'
 C:\Users\User\Desktop\coding sources\maze_01\maze_01\main.cpp(20,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data

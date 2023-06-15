@@ -69,20 +69,18 @@ float maze::test_path(const path& path) const
     std::unordered_set<int> visited;
 
     // TODO: add to global parameters
-    float visited_weight = 0.1;
-    float wall_weight = 0.1;
-    float distance_weight = 1;
+    float visited_weight = 0.05;
+    float wall_weight = 0.05;
+    float distance_weight = 0.8;
 
-    bool findTarget = false;
 
     for (const auto& direction : path.directions)
     {
 
         position next = current + direction;
-        if (is_exit(next))
+        if (is_exit(next)) // find target
         {
             current = next;
-            findTarget = true;
             break;
         }
         else
@@ -95,7 +93,7 @@ float maze::test_path(const path& path) const
                     visited.insert(next.x * m_cols + next.y); // store the visited node
                 current = next;
             }
-            else
+            else // hits the obstacles
             {
                 penalty += wall_weight;
             }

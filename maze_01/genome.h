@@ -12,6 +12,7 @@ struct genome
     genome(int size) : fitness(0)
     {
         // 00 - up    01 - right    10 - down    11 - left
+        // 2 genes represent one direction
         for (int i = 0; i < size; i++)
         {
             data.push_back(rand() % 2); 

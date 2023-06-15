@@ -7,8 +7,8 @@ using namespace std;
 const float crossover_rate = 0.7;
 const float mutation_rate = 0.05;
 const int population_size = 100;
-const int genome_size = 50;
-const int num_generations = 50;
+const int genome_size = 50; // 80 directions = 160 chromosomes
+const int num_generations = 100;
 
 // output file
 ofstream averageFitnessFile;
@@ -27,7 +27,7 @@ int main()
     // Create an instance of the ga class
     ga myGA(population_size, genome_size, crossover_rate, mutation_rate); // initialise chromosome 
     myGA.generation(myMaze);
-    myGA.printGeneration();
+    //myGA.printGeneration();
 
     float bestFitness = 0;
     float averageFitness = 0;
@@ -35,8 +35,8 @@ int main()
     for (int i = 0; i < num_generations; i++)
     {
         myGA.generation(myMaze); // calculate fitness
-        myGA.printGeneration();
-        myGA.performCrossoverAndMutation(); // perform crossover and mutation 
+        //myGA.printGeneration();
+        myGA.performCrossoverAndMutation(myMaze); // perform crossover and mutation 
         averageFitness = myGA.get_total_fitness()/population_size;
         if (bestFitness < myGA.get_current_generation_best())
         {

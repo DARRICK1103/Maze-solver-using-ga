@@ -12,11 +12,11 @@ public:
 	
 	void generation(const maze& maze);
 
-	void performCrossoverAndMutation();
+	void performCrossoverAndMutation(const maze& maze);
 	float get_current_generation_best();
 	int get_curent_generation();
 	float get_total_fitness();
-	std::vector<path> get_all_paths();
+	
 	void printGeneration();
 
 private:
@@ -24,6 +24,7 @@ private:
 	genome crossover(const genome& parent1, const genome& parent2);
 	void mutate(genome& genome);
 	path decode(const genome& genome) const;
+	genome& survivalSelection(const maze& maze, genome parent1, genome parent2, genome child);
 
 private:
 	std::vector<genome> m_genomes;
